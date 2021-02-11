@@ -1,0 +1,40 @@
+[package]
+name = "tun_rust"
+version = "0.1.0"
+authors = ["devg1120 <devg1120@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio-tun = "0.3.5"
+#tokio-tun = { git = "https://github.com/hankbao/tokio-tun.git" }
+tokio = { version = "1.1", features = ["net"] }
+#mio = "0.6"
+tokio-tungstenite = { path = "tokio-tungstenite" }
+rustyline   = { path = "rustyline" }
+rustyline-derive   = { path = "rustyline/rustyline-derive" }
+
+futures-util = { version = "0.3", default-features = false, features = ["async-await", "sink", "std"] }
+log = "0.4"
+
+
+libc = "0.2"
+nix = "0.19"
+futures = "0.3"
+
+pnet = "0.27.2"
+bytes = "*"
+futures-channel = "0.3"
+url = "2.0.0"
+env_logger = { version = "0.8", default-features = false }
+
+
+[dev-dependencies]
+tokio = { version = "1.1", features = ["full"] }
+futures-channel = "0.3"
+url = "2.0.0"
+rustyline   = { path = "rustyline" }
+env_logger = { version = "0.8", default-features = false }
+
+

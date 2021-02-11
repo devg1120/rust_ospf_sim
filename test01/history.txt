@@ -1,0 +1,10 @@
+#V2
+stop 10.1.0.2
+start 10.1.0.2
+stop 10.1.0.2
+start 10.1.0.2
+stop 10.1.0.2
+start 10.1.0.2
+quit
+stop 10.1.0.2
+start 10.1.0.2

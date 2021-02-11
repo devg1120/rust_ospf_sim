@@ -1,0 +1,3 @@
+cargo run --example server
+cargo run --example echo-server
+cargo run --example client ws:/127.0.0.1:8080/
