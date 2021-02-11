@@ -260,12 +260,12 @@ fn main() -> Result<()> {
     println!("router: {}",router.get_hostname());
 
     router.add_route(router::Route { dest: "10.1.1.1".to_string(), metric: 1});
-    //router.add_iface(router::Iface { name: "eth0".to_string(), 
-    //    bandwith: 1,
-    //    address: "127.0.0.1".parse::<IpAddr>().unwrap(),
-    //    netmask: 24,
-    //    router: &router,
-    //});
+    router.add_iface(router::Iface { name: "eth0".to_string(), 
+        bandwith: 1,
+        address: "127.0.0.1".parse::<IpAddr>().unwrap(),
+        netmask: 24,
+        //router:  router,
+    });
     println!("router: {:?}",router.routetable);
 
     return Ok(());

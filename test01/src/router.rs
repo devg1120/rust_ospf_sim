@@ -27,23 +27,23 @@ impl RouteTable {
 }
 
 #[derive(Debug)]
-pub struct Iface<'a> {
+pub struct Iface {
      pub name: String,
      pub bandwith: i32,
      pub address: IpAddr,
      pub netmask: i32,
-     pub router: &'a Router<'a>,
+     //pub router: &'a mut Router<'a>,
 }
 
 #[derive(Debug)]
-pub struct Router<'a> {
+pub struct Router {
 
     pub hostname: String,
-    pub iface: LinkedList<Iface<'a>>,
+    pub iface: LinkedList<Iface>,
     pub routetable: RouteTable,
 }
 
-impl<'a> Router<'a> {
+impl Router {
 
     pub fn set_hostname(&mut self, name:String) {
        self.hostname = name;
@@ -57,7 +57,7 @@ impl<'a> Router<'a> {
        self.routetable.add_route(route);
     }
 
-    pub fn add_iface(&mut self, iface: Iface<'static>) {
+    pub fn add_iface(&mut self, iface: Iface) {
        self.iface.push_back(iface);
     }
 
